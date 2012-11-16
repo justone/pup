@@ -4,3 +4,6 @@
 [submodule "base/firewall"]
 	path = base/firewall
 	url = https://github.com/puppetlabs/puppetlabs-firewall.git
+[submodule "base/apache"]
+	path = base/apache
+	url = https://github.com/puppetlabs/puppetlabs-apache.git
