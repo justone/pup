@@ -1,3 +1,6 @@
 [submodule "base/stdlib"]
 	path = base/stdlib
 	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
+[submodule "base/firewall"]
+	path = base/firewall
+	url = https://github.com/puppetlabs/puppetlabs-firewall.git
