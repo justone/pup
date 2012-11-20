@@ -1,5 +1,5 @@
 class server {
-  package { ['git', 'vim-nox']: ensure => installed }
+  include server::base
 
-  class { 'server::firewall': }
+  server::site { 'domain.com': }
 }

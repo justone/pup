@@ -1,5 +1,7 @@
 # Always persist firewall rules
-notice($::osfamily)
+file { '/etc/iptables':
+  ensure => directory,
+} ->
 exec { 'persist-firewall':
   command     => $operatingsystem ? {
     /(Ubuntu|Debian)/          => '/sbin/iptables-save > /etc/iptables/rules.v4',
