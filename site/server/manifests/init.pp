@@ -1,5 +1,16 @@
 class server {
   include server::base
 
-  server::site { 'domain.com': }
+  include server::users::nate
+
+  case $hostname {
+    've15': {
+      package { ['irssi']: ensure => installed }
+
+      server::site { 've15.endot.org': }
+    }
+    'silo': {
+      # nothing, yet
+    }
+  }
 }
