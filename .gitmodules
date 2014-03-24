@@ -7,3 +7,12 @@
 [submodule "base/apache"]
 	path = base/apache
 	url = https://github.com/puppetlabs/puppetlabs-apache.git
+[submodule "base/nginx"]
+	path = base/nginx
+	url = https://github.com/jfryman/puppet-nginx.git
+[submodule "base/apt"]
+	path = base/apt
+	url = https://github.com/puppetlabs/puppetlabs-apt
+[submodule "base/concat"]
+	path = base/concat
+	url = https://github.com/puppetlabs/puppetlabs-concat.git

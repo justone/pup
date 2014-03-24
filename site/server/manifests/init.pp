@@ -12,5 +12,8 @@ class server {
     'silo': {
       # nothing, yet
     }
+    'digit': {
+      include server::site::drone
+    }
   }
 }
