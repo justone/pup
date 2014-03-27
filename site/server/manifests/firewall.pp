@@ -12,4 +12,9 @@ class server::firewall {
     dport  => '80',
   }   
 
+  firewall { "200 INPUT allow all to https ports":
+    action => 'accept',
+    dport  => '443',
+  }   
+
 }
