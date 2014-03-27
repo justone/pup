@@ -9,9 +9,10 @@ class server::site::drone {
   }
 
   nginx::resource::vhost { 'drone.ndj.la':
-    proxy    => 'http://drone_app',
-    ssl      => true,
-    ssl_cert => $server::ssl::ndjla::cert,
-    ssl_key  => $server::ssl::ndjla::key,
+    proxy            => 'http://drone_app',
+    ssl              => true,
+    ssl_cert         => $server::ssl::ndjla::cert,
+    ssl_key          => $server::ssl::ndjla::key,
+    rewrite_to_https => true,
   }
 }
