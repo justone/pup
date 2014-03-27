@@ -13,6 +13,7 @@ class server {
       # nothing, yet
     }
     'digit': {
+      include server::docker
       include server::site::drone
     }
   }
