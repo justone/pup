@@ -28,7 +28,7 @@ Firewallchain {
 # This will clear any existing rules, and make sure that only rules
 # defined in puppet exist on the machine
 resources { "firewall":
-  purge => true
+  purge => false
 }
 
 include server
