@@ -2,9 +2,14 @@ class server::site::rabbit_management {
   include server::nginx_setup
   include server::ssl::ndjla
 
+  firewall { "200 INPUT allow all to rabbit amqps port":
+    action => 'accept',
+    dport  => '5671',
+  }   
+
   nginx::resource::upstream { 'rabbitmq_management':
     members => [
-      'localhost:25672',
+      'localhost:15672',
     ],
   }
 
