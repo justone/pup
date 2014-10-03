@@ -12,7 +12,7 @@ class server {
     'silo': {
       # nothing, yet
     }
-    'digit': {
+    /^digit/: {
       include server::docker
       include server::site::drone
 
