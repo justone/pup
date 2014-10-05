@@ -1,8 +1,6 @@
 class server {
   include server::base
 
-  include server::users::nate
-
   case $hostname {
     've15': {
       package { ['irssi']: ensure => installed }
@@ -10,7 +8,7 @@ class server {
       server::site { 've15.endot.org': }
     }
     'silo': {
-      # nothing, yet
+      include server::docker
     }
     /^digit/: {
       include server::docker
@@ -19,4 +17,7 @@ class server {
       class { 'server::firewall': }
     }
   }
+
+  include server::users::nate
+
 }
