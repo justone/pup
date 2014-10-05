@@ -9,6 +9,7 @@ class server {
     }
     'silo': {
       include server::docker
+      include server::hardware
     }
     /^digit/: {
       include server::docker
