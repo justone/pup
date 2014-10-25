@@ -13,6 +13,8 @@ class server::base {
     # for fetching go packages
     'mercurial',
     'subversion',
+
+    'perl-doc',
   ]
 
   package { $packages:
