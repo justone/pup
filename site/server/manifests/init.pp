@@ -14,6 +14,7 @@ class server {
     /^digit/: {
       include server::docker
       include server::site::drone
+      include server::site::rabbit_management
 
       class { 'server::firewall': }
     }
