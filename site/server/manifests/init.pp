@@ -15,6 +15,7 @@ class server {
       include server::docker
       include server::site::drone
       include server::site::rabbit_management
+      include server::site::rancher
 
       class { 'server::firewall': }
     }
