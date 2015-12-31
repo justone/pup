@@ -4,7 +4,7 @@ class server::site::pmb_github {
 
   nginx::resource::upstream { 'pmb_github':
     members => [
-      'localhost:3000',
+      'localhost:3001',
     ],
   }
 
