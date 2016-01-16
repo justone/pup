@@ -16,6 +16,7 @@ class server {
       include server::site::drone
       include server::site::rabbit_management
       include server::site::pmb_github
+      include server::site::pmb_broker
 
       class { 'server::firewall': }
     }
